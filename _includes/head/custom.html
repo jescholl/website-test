@@ -1,5 +1,5 @@
 {% include head/favicon.html %}
-{% assign cache_bust = site.github.revision | default: site.time | date:'%s' | prepend: '?v=' %}
+{% assign cache_bust = site.github.build_revision | default: site.time | date:'%s' | prepend: '?v=' %}
 
 <!-- start custom head snippets -->
 

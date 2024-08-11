@@ -1,4 +1,4 @@
-{% assign cache_bust = site.github.revision | default: site.time | date:'%s' | prepend: '?v=' %}
+{% assign cache_bust = site.github.build_revision | default: site.time | date:'%s' | prepend: '?v=' %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
