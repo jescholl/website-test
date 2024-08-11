@@ -189,6 +189,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-github-metadata
 
   - jekyll-include-cache
 
