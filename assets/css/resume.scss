@@ -1,0 +1,19 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+// "Reset" styles and SCSS reusable components
+@import "resume/normalize";
+@import "resume/mixins";
+@import "resume/variables";
+
+// Generic site base & layout styles
+@import "resume/base";
+@import "resume/layout";
+
+// Layouts
+@import "resume/resume";
+
+// Print overrides
+@import "resume/print";

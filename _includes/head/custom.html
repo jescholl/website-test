@@ -1,0 +1,12 @@
+{% include head/favicon.html %}
+{% assign cache_bust = site.time | date:'?v=%s' %}
+
+<!-- start custom head snippets -->
+
+ <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url | append: cache_bust }}">
+{% if page.graph %}
+  <script src="{{ '/assets/js/graph/d3.v3.min.js' | relative_url | append: cache_bust }}"></script>
+  <script src="{{ '/assets/js/graph/function-plot.min.js' | relative_url | append: cache_bust }}"></script>
+{% endif %}
+
+<!-- end custom head snippets -->
