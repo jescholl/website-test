@@ -1,4 +1,4 @@
-{% assign cache_bust = site.time | date:'?v=%s' %}
+{% assign cache_bust = site.github.revision | default: site.time | date:'%s' | prepend: '?v=' %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,9 +12,6 @@
   {% endif %}
 
   <link rel="stylesheet" href="{{ '/assets/css/resume.css' | relative_url | append: cache_bust }}">
-  this
-  {{ site.github}}
-  that
 
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
